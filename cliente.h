@@ -4,6 +4,24 @@
 #include <string>
 #include <vector>
 #include "tipoproducto.h"
+class Cliente {
+private:
+    std::vector<Tipoproducto> tipos_;
+    Tipoproducto* buscarTipoInterno(const std::string& nombreTipo);
+public:
+    Cliente();
 
+    float getSumaTotal() const;
+    float getSumaProductos() const;
+    float getSumaServicios() const;
+    float getSumaCibercafe() const;
+
+    const std::vector<Tipoproducto>& getTipos() const;
+
+    void registrarCompra(const std::string& nombreTipo, const Producto& p);
+    void inicializarTipos();
+    
+
+};
 
 #endif // CLIENTE_H
