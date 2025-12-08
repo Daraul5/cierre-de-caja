@@ -10,6 +10,7 @@ private:
     float precio_;
     int cantidad_;
 public:
+    Producto() : precio_(0.0f), cantidad_(0) {}
     Producto(const std::string& nombre, float precio, int cantidad);
 
     const std::string& getNombre() const;

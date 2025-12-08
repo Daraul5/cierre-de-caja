@@ -1532,9 +1532,9 @@ void mostrarcli2()
 				for (k = 0; k < turnos[ti].clientes[ci].tipos[j].numproductos; k++)
 				{
 					printf("  Producto: %s, Precio: %.2f, Cantidad: %d\n",
-						   turnos[ti].clientes[ci].tipos[j].productos[k].nombre,
-						   turnos[ti].clientes[ci].tipos[j].productos[k].precio,
-						   turnos[ti].clientes[ci].tipos[j].productos[k].cantidad);
+							turnos[ti].clientes[ci].tipos[j].productos[k].nombre,
+							turnos[ti].clientes[ci].tipos[j].productos[k].precio,
+							turnos[ti].clientes[ci].tipos[j].productos[k].cantidad);
 				}
 			}
 			printf("Suma total del cliente: %.2f\n", turnos[ti].clientes[ci].suma);
@@ -1567,9 +1567,9 @@ void buscar2()
 				for (int k = 0; k < turnos[1].clientes[i].tipos[j].numproductos; k++)
 				{
 					printf("  Producto: %s, Precio: %.2f, Cantidad: %d\n",
-						   turnos[1].clientes[i].tipos[j].productos[k].nombre,
-						   turnos[1].clientes[i].tipos[j].productos[k].precio,
-						   turnos[1].clientes[i].tipos[j].productos[k].cantidad);
+							turnos[1].clientes[i].tipos[j].productos[k].nombre,
+							turnos[1].clientes[i].tipos[j].productos[k].precio,
+							turnos[1].clientes[i].tipos[j].productos[k].cantidad);
 				}
 			}
 		}
@@ -1649,9 +1649,9 @@ void modificar2()
 				for (int k = 0; k < turnos[1].clientes[i].tipos[j].numproductos; k++)
 				{
 					printf("  Producto: %s, Precio: %.2f, Cantidad: %d\n",
-						   turnos[1].clientes[i].tipos[j].productos[k].nombre,
-						   turnos[1].clientes[i].tipos[j].productos[k].precio,
-						   turnos[1].clientes[i].tipos[j].productos[k].cantidad);
+							turnos[1].clientes[i].tipos[j].productos[k].nombre,
+							turnos[1].clientes[i].tipos[j].productos[k].precio,
+							turnos[1].clientes[i].tipos[j].productos[k].cantidad);
 					printf("%f\n", turnos[1].tpr);
 					printf("%f\n", turnos[1].ts);
 					printf("%f\n", turnos[1].tci);

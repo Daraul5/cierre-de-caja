@@ -7,7 +7,7 @@
 class Cliente {
 private:
     std::vector<Tipoproducto> tipos_;
-    Tipoproducto* buscarTipoInterno(const std::string& nombreTipo);
+    
 public:
     Cliente();
 
@@ -17,7 +17,7 @@ public:
     float getSumaCibercafe() const;
 
     const std::vector<Tipoproducto>& getTipos() const;
-
+    const Tipoproducto* buscarTipoInterno(const std::string& nombreTipo);
     void registrarCompra(const std::string& nombreTipo, const Producto& p);
     void inicializarTipos();
     
