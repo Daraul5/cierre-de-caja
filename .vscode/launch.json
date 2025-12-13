@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "configurations": [
+        {
+            "name": "C/C++: MinGW/GDB - Ejecutar gestor_turnos",
+            "type": "cppdbg",
+            "request": "launch",
+            // 1. RUTA DEL EJECUTABLE: Apunta al archivo que fue creado con éxito
+            "program": "${workspaceFolder}/output/gestor_turnos.exe", 
+            "args": [],
+            "stopAtEntry": false,
+            // 2. DIRECTORIO DE TRABAJO: Asegura que el programa se ejecute desde la carpeta correcta
+            "cwd": "${workspaceFolder}/output", 
+            "environment": [],
+            "console": "integratedTerminal", // Usa la terminal integrada de VS Code
+            "MIMode": "gdb",
+            
+            // 3. RUTA DEL DEPURADOR GDB: Verifica que esta ruta sea correcta para tu instalación msys64
+            "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe", 
+            
+            "setupCommands": [
+                {
+                    "description": "Enable pretty printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            // 4. TAREA DE COMPILACIÓN PREVIA: Llama a la tarea que SÍ compila todos tus archivos
+            "preLaunchTask": "C/C++: g++.exe build project" 
+        }
+    ]
+}

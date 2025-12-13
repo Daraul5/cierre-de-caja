@@ -1,14 +1,14 @@
-#include <catalogo.h>
+#include "catalogo.h"
 #include <vector>
 #include <iostream>
 #include <algorithm>
 #include <cctype>
 
-std::vector<Produto> Catalogo::productosDisponibles_;
+std::vector<Producto> Catalogo::productosDisponibles_;
 std::string tolower(const std::string& str){
     std::string lower_Str = str;
     std::transform(lower_Str.begin(), lower_Str.end(), lower_Str.begin(), 
-                    [](unsigned char c){ return std::tolower(c)});
+                    [](unsigned char c){ return std::tolower(c);});
     return lower_Str;
 }
 
@@ -29,23 +29,23 @@ void Catalogo::cargarCatalogo(){
     std::cout << "Catalogo cargado con " << productosDisponibles_.size() << " productos y servicios." << std::endl;
 }
 
-void Catalogo::inicializarCatalogo(){
-    if(productosDispibles_.empty()){
+void Catalogo::inicializar(){
+    if(Catalogo::productosDisponibles_.empty()){
         cargarCatalogo();
     }
 }
 
-Producto obtenerProductoPorNombre(const std::string& nombre){
+Producto Catalogo::obtenerProductoPorNombre(const std::string& nombre){
     std::string nombreBuscado = tolower(nombre);
 
     for(const auto& producto : productosDisponibles_){
-        if(tolowe(producto.getNombre())== nombreBuscado){
+        if(tolower(producto.getNombre())== nombreBuscado){
             return producto;
         }
     }
-    return Produto{"producto no encontrado", 0.0f, 0}; // Producto no encontrado
+    return Producto{"producto no encontrado", 0.0f, 0}; // Producto no encontrado
 }
 
-std::vector<Produto>& Catalogo::getproductosdisponibles(){
+const std::vector<Producto>& Catalogo::getproductosdisponibles(){
     return productosDisponibles_;
 }

@@ -3,17 +3,17 @@
 
 #include <vector>
 #include <string>
-#include "produto.h"
+#include "Producto.h"
 
 class Catalogo {
 private:
-    std::vector<Produto> productosDisponibles_;
+    static std::vector<Producto> productosDisponibles_;
     static void cargarCatalogo();
 
 public:
-    static void inicializarCatalogo();
-    static Producto obtenerProductoPorNombre(const string& nombre);
-    static const std::vector<Produto>& getproductosdisponibles();
+    static void inicializar();
+    static Producto obtenerProductoPorNombre(const std::string& nombre);
+    static const std::vector<Producto>& getproductosdisponibles();
 };
 
 #endif // CATALOGO_H

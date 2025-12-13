@@ -1,5 +1,5 @@
 #include "cliente.h"
-const Tipoproducto *Cliente::buscarTipoInterno(const std::string &nombreTipo)
+Tipoproducto *Cliente::buscarTipoInterno(const std::string &nombreTipo)
 {
     for(auto& tipo :tipos_)
     {
